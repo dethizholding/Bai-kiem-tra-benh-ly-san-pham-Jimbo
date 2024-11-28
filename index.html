@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn đề kiểm tra ngẫu nhiên - JIMBO </title>
+    <script>
+        window.onload = function() {
+            // Danh sách link đến các Google Form
+            const forms = [
+                "https://docs.google.com/forms/d/1UPcWfaem0rx3ujoW_3a8xowUWzmyPpsWLxG08h1AU9M/edit", // Thay bằng link Form 1
+                "https://docs.google.com/forms/d/1X5sBMbuhZOTfPXVs77fMuVv1Bn95LD1Hpfb1FRvtArM/edit", // Thay bằng link Form 2
+		"https://docs.google.com/forms/d/1s_c_cvWrGkvzM88AHcx6z7j5ng9OLtva02HVhcesS8o/edit",
+                "https://docs.google.com/forms/d/1T_r-s5W0kh5Xn_3oaclqPVku4UA873ueAhpfnoJfevg/edit"  // Thay bằng link Form 3
+            ];
+
+            // Chọn ngẫu nhiên một link
+            const randomForm = forms[Math.floor(Math.random() * forms.length)];
+
+            // Chuyển hướng người dùng
+            window.location.href = randomForm;
+        };
+    </script>
+</head>
+<body>
+    <h1>Đang chọn đề ngẫu nhiên...</h1>
+    <p>Nếu bạn không được chuyển hướng, hãy <a id="manualLink" href="#">bấm vào đây</a>.</p>
+    <script>
+        const forms = [
+            "https://docs.google.com/forms/d/1UPcWfaem0rx3ujoW_3a8xowUWzmyPpsWLxG08h1AU9M/edit", // Thay bằng link Form 1
+                "https://docs.google.com/forms/d/1X5sBMbuhZOTfPXVs77fMuVv1Bn95LD1Hpfb1FRvtArM/edit", // Thay bằng link Form 2
+		"https://docs.google.com/forms/d/1s_c_cvWrGkvzM88AHcx6z7j5ng9OLtva02HVhcesS8o/edit",
+                "https://docs.google.com/forms/d/1T_r-s5W0kh5Xn_3oaclqPVku4UA873ueAhpfnoJfevg/edit"  // Thay bằng link Form 3
+        ];
+        document.getElementById('manualLink').href = forms[Math.floor(Math.random() * forms.length)];
+    </script>
+</body>
+</html>
